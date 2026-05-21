@@ -43,11 +43,13 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background-co
 <header class="bg-gradient-to-br from-[#002855] via-[#004B87] to-[#00629B] text-white py-16 px-4">
 <div class="max-w-5xl mx-auto text-center">
 <div class="flex justify-center mb-6">
-    
+    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-400/20 text-yellow-300 border border-yellow-400/30 text-sm font-semibold mb-4">
+        ⚠️ Planificación de Recursos: Capacidad para 1 Desarrollador Full-Stack
+    </span>
 </div>
-<h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-white">Análisis de Arquitectura y Sprints</h1>
+<h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-white">Análisis Técnico y Plan del Chatbot</h1>
 <p class="text-base md:text-lg text-slate-200 max-w-3xl mx-auto leading-relaxed">
-Planificación adaptada a la capacidad real de ejecución (1 recurso Full-Stack). Comparamos la opción <strong>Enterprise (16 semanas)</strong> con la ruta <strong>Equilibrada de la Tríada de 3 Agentes (12 semanas)</strong>.
+Evaluación de arquitectura multicapa para Daiichi-Sankyo. Comparamos el modelo <strong>Enterprise Distribuido</strong>, la <strong>Tríada de 3 Agentes</strong> y el <strong>Monolito Unificado de 5 Agentes en n8n</strong>.
 </p>
 </div>
 </header>
@@ -58,38 +60,57 @@ Planificación adaptada a la capacidad real de ejecución (1 recurso Full-Stack)
 <section id="resumen" class="scroll-mt-24">
 <div class="mb-8 text-center">
 <h2 class="text-3xl font-bold text-[#002855] mb-2">Resumen de Opciones Holísticas</h2>
-<p class="text-slate-600 max-w-2xl mx-auto">Comparación de ambas vías con holgura realista para que un solo desarrollador pueda abordar la infraestructura, el backend AI y el frontend UI sin sobrecarga cognitiva.</p>
+<p class="text-slate-600 max-w-2xl mx-auto">Comparación de las tres vías de desarrollo propuestas bajo plazos holísticos que garantizan la calidad del código, el control de seguridad y las pruebas.</p>
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div class="bg-white rounded-2xl p-8 card-elevation border-t-8 border-[#00629B] flex flex-col h-full">
-<div class="text-4xl mb-4">🏢</div>
-<h3 class="text-2xl font-bold text-[#002855] mb-2">Opción 1: Enterprise Distribuida</h3>
-<p class="text-slate-600 mb-6 flex-grow">Implementación estricta de 5 agentes independientes en AWS con roles aislados (API Gateway, ALB). Demanda un alto esfuerzo de configuración de red, seguridad IAM fragmentada y genera una alta latencia acumulada debido a las llamadas sucesivas entre LLMs.</p>
-<div class="grid grid-cols-2 gap-4 mt-auto">
-<div class="bg-sky-50 p-4 rounded-lg border border-sky-100">
-<div class="text-xs font-bold text-[#00629B] uppercase">Tiempo Realista</div>
-<div class="text-2xl font-black text-[#002855]">16 Semanas</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- OPCIÓN 1 -->
+<div class="bg-white rounded-2xl p-6 card-elevation border-t-8 border-[#00629B] flex flex-col h-full">
+<div class="text-3xl mb-3">🏢</div>
+<h3 class="text-xl font-bold text-[#002855] mb-2">Opción 1: Enterprise Distribuida</h3>
+<p class="text-xs text-slate-600 mb-6 flex-grow">Implementación estricta de 5 agentes independientes en AWS con roles aislados (API Gateway, ALB). Demanda un alto esfuerzo de configuración de red, seguridad IAM fragmentada y genera una alta latencia acumulada debido a las llamadas sucesivas de red entre sub-flujos.</p>
+<div class="grid grid-cols-2 gap-2 mt-auto">
+<div class="bg-sky-50 p-3 rounded-lg border border-sky-100 text-center">
+<div class="text-[9px] font-bold text-[#00629B] uppercase">Tiempo</div>
+<div class="text-lg font-black text-[#002855]">16 Semanas</div>
 </div>
-<div class="bg-sky-50 p-4 rounded-lg border border-sky-100">
-<div class="text-xs font-bold text-[#00629B] uppercase">Carga Cognitiva (1 Dev)</div>
-<div class="text-2xl font-black text-red-600">Extrema</div>
+<div class="bg-sky-50 p-3 rounded-lg border border-sky-100 text-center">
+<div class="text-[9px] font-bold text-[#00629B] uppercase">Carga (1 Dev)</div>
+<div class="text-sm font-bold text-red-600">Extrema</div>
 </div>
 </div>
 </div>
 
-<div class="bg-white rounded-2xl p-8 card-elevation border-t-8 border-[#009639] flex flex-col h-full">
-<div class="text-4xl mb-4">⚖️</div>
-<h3 class="text-2xl font-bold text-[#009639] mb-2">Opción 2: Equilibrio 3 Agentes (Recomendada)</h3>
-<p class="text-slate-600 mb-6 flex-grow">Elimina intermediarios pesados de AWS, conectando S3 Frontend directamente a n8n de forma segura. Divide la IA en 3 agentes especializados (Enrutador, Analista y Sintetizador) alojados en un solo flujo visual para controlar alucinaciones, tokens y latencia de red.</p>
-<div class="grid grid-cols-2 gap-4 mt-auto">
-<div class="bg-emerald-50 p-4 rounded-lg border border-emerald-100">
-<div class="text-xs font-bold text-[#009639] uppercase">Tiempo Realista</div>
-<div class="text-2xl font-black text-[#002855]">12 Semanas</div>
+<!-- OPCIÓN 2 -->
+<div class="bg-white rounded-2xl p-6 card-elevation border-t-8 border-[#009639] flex flex-col h-full">
+<div class="text-3xl mb-3">⚖️</div>
+<h3 class="text-xl font-bold text-[#009639] mb-2">Opción 2: El Equilibrio de la Tríada</h3>
+<p class="text-xs text-slate-600 mb-6 flex-grow">Elimina intermediarios complejos de red y conecta el chat de S3 directamente a n8n. Condensa la lógica cognitiva de negocio en solo 3 agentes hiperespecializados (Enrutador, Analista y Sintetizador) reduciendo saltos, costos de tokens y latencia conversacional.</p>
+<div class="grid grid-cols-2 gap-2 mt-auto">
+<div class="bg-emerald-50 p-3 rounded-lg border border-emerald-100 text-center">
+<div class="text-[9px] font-bold text-[#009639] uppercase">Tiempo</div>
+<div class="text-lg font-black text-[#009639]">12 Semanas</div>
 </div>
-<div class="bg-emerald-50 p-4 rounded-lg border border-emerald-100">
-<div class="text-xs font-bold text-[#009639] uppercase">Carga Cognitiva (1 Dev)</div>
-<div class="text-2xl font-black text-emerald-600">Manejable</div>
+<div class="bg-emerald-50 p-3 rounded-lg border border-emerald-100 text-center">
+<div class="text-[9px] font-bold text-[#009639] uppercase">Carga (1 Dev)</div>
+<div class="text-sm font-bold text-emerald-600">Manejable</div>
+</div>
+</div>
+</div>
+
+<!-- OPCIÓN 3 -->
+<div class="bg-white rounded-2xl p-6 card-elevation border-t-8 border-[#D69E2E] flex flex-col h-full">
+<div class="text-3xl mb-3">🛠️</div>
+<h3 class="text-xl font-bold text-[#D69E2E] mb-2">Opción 3: Monolito de 5 Agentes</h3>
+<p class="text-xs text-slate-600 mb-6 flex-grow">Preserva el diseño original de 5 agentes lógicos pero los consolida en **un solo lienzo de n8n**. Elimina la fricción de redes complejas iniciales y reemplaza la IA del Agente de Visualización por un nodo con código JavaScript nativo ultrarrápido.</p>
+<div class="grid grid-cols-2 gap-2 mt-auto">
+<div class="bg-amber-50 p-3 rounded-lg border border-amber-100 text-center">
+<div class="text-[9px] font-bold text-[#D69E2E] uppercase">Tiempo</div>
+<div class="text-lg font-black text-[#D69E2E]">13 Semanas</div>
+</div>
+<div class="bg-amber-50 p-3 rounded-lg border border-amber-100 text-center">
+<div class="text-[9px] font-bold text-[#D69E2E] uppercase">Carga (1 Dev)</div>
+<div class="text-sm font-bold text-amber-600">Moderada</div>
 </div>
 </div>
 </div>
@@ -156,16 +177,19 @@ El Frontend asume responsabilidades clave de experiencia de usuario: sanitizar i
 <section id="arquitectura" class="scroll-mt-24 bg-white rounded-2xl p-8 card-elevation border border-slate-200">
 <h2 class="text-3xl font-bold text-[#002855] mb-2 text-center">Flujos de Arquitectura</h2>
 <p class="text-slate-600 max-w-3xl mx-auto text-center mb-8">
-Explora la secuencia lógica del sistema. <strong>Haz clic en cualquier caja de los diagramas</strong> para revelar en detalle las especificaciones técnicas, protocolos de red y payloads de datos correspondientes.
+Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja de los diagramas</strong> para revelar en detalle las especificaciones técnicas, protocolos de red y payloads de datos correspondientes.
 </p>
 
 <div class="flex justify-center mb-8">
-<div class="inline-flex rounded-lg bg-slate-200 p-1">
-<button id="btnArchOpt1" onclick="switchArchFlow(1)" class="px-5 py-2 rounded-md text-xs font-semibold transition-all duration-200 text-slate-700 hover:text-[#002855]">
-🏢 Opción 1 (5 Agentes / 16 Semanas)
+<div class="inline-flex rounded-lg bg-slate-200 p-1 flex-wrap justify-center gap-1 md:gap-0">
+<button id="btnArchOpt1" onclick="switchArchFlow(1)" class="px-4 py-2 rounded-md text-xs font-semibold transition-all duration-200 text-slate-700 hover:text-[#002855]">
+🏢 Opción 1 (16 Semanas)
 </button>
-<button id="btnArchOpt2" onclick="switchArchFlow(2)" class="px-5 py-2 rounded-md text-xs font-semibold transition-all duration-200 bg-[#009639] text-white shadow-sm">
-⚖️ Opción 2 (3 Agentes / 12 Semanas)
+<button id="btnArchOpt2" onclick="switchArchFlow(2)" class="px-4 py-2 rounded-md text-xs font-semibold transition-all duration-200 text-slate-700 hover:text-[#002855]">
+⚖️ Opción 2 (12 Semanas)
+</button>
+<button id="btnArchOpt3" onclick="switchArchFlow(3)" class="px-4 py-2 rounded-md text-xs font-semibold transition-all duration-200 bg-[#D69E2E] text-white shadow-sm">
+🛠️ Opción 3 (13 Semanas)
 </button>
 </div>
 </div>
@@ -192,7 +216,7 @@ Explora la secuencia lógica del sistema. <strong>Haz clic en cualquier caja de 
 </div>
 
 <!-- CONTENEDOR DE DIAGRAMA DE OPCIÓN 2 -->
-<div id="archFlow2" class="space-y-8">
+<div id="archFlow2" class="space-y-8 hidden">
     <div class="flex flex-wrap items-center gap-y-4 justify-center bg-emerald-50/40 p-6 rounded-2xl border border-emerald-100 font-medium">
         <div id="node2_usr" onclick="selectNode(2, 'usr')" class="flow-box bg-[#009639] text-white border-[#009639] hover:scale-105 active:scale-95 shadow-md">👤 Usuario</div>
         <div class="arrow">&#10140;</div>
@@ -206,10 +230,25 @@ Explora la secuencia lógica del sistema. <strong>Haz clic en cualquier caja de 
     </div>
 </div>
 
+<!-- CONTENEDOR DE DIAGRAMA DE OPCIÓN 3 -->
+<div id="archFlow3" class="space-y-8">
+    <div class="flex flex-wrap items-center gap-y-4 justify-center bg-amber-50/40 p-6 rounded-2xl border border-amber-200 font-medium">
+        <div id="node3_usr" onclick="selectNode(3, 'usr')" class="flow-box bg-[#D69E2E] text-white border-[#D69E2E] hover:scale-105 active:scale-95 shadow-md">👤 Usuario</div>
+        <div class="arrow">&#10140;</div>
+        <div id="node3_s3c" onclick="selectNode(3, 's3c')" class="flow-box bg-amber-50 text-amber-800 border-amber-200 hover:border-[#D69E2E] hover:scale-105 active:scale-95 flex flex-col"><span class="text-xs">🗂️ S3 / CloudFront</span><span class="text-[9px] font-normal">SPA Directa</span></div>
+        <div class="arrow">&#10140;</div>
+        <div id="node3_n8n" onclick="selectNode(3, 'n8n')" class="flow-box bg-amber-100 text-[#002855] border-[#D69E2E] hover:scale-105 active:scale-95 font-bold flex flex-col"><span class="text-xs">⚙️ n8n Webhook</span><span class="text-[9px] font-normal">Lienzo Monolito (5 Ag)</span></div>
+        <div class="arrow">&#10140;</div>
+        <div id="node3_dat" onclick="selectNode(3, 'dat')" class="flow-box bg-amber-200 text-amber-900 border-amber-400 hover:scale-105 active:scale-95 flex flex-col"><span class="text-xs">🧠 Bedrock & Athena</span><span class="text-[9px] font-normal">S3 Gold Layer</span></div>
+        <div class="arrow">&#10140;</div>
+        <div id="node3_trc" onclick="selectNode(3, 'trc')" class="flow-box bg-purple-100 text-purple-800 border-purple-300 hover:scale-105 active:scale-95">📊 Langfuse & S3</div>
+    </div>
+</div>
+
 <!-- FICHA TÉCNICA DINÁMICA -->
 <div class="max-w-4xl mx-auto mt-6 bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-inner transition-all duration-300">
     <div class="flex items-center space-x-3 mb-4">
-        <div class="p-2 bg-emerald-600 text-white rounded-lg text-lg" id="detailIcon">👤</div>
+        <div class="p-2 bg-amber-600 text-white rounded-lg text-lg" id="detailIcon">👤</div>
         <h4 class="text-lg font-bold text-[#002855]" id="detailTitle">Usuario</h4>
     </div>
     
@@ -240,12 +279,15 @@ Explora la secuencia lógica del sistema. <strong>Haz clic en cualquier caja de 
 <h2 class="text-3xl font-bold text-[#002855] mb-2">Desglose Técnico de Sprints (1 Dev)</h2>
 <p class="text-slate-600 max-w-2xl mx-auto mb-8 font-medium">Cronograma de actividades ampliado y realista asumiendo a una sola persona manejando la infraestructura AWS, flujos n8n y el diseño del Frontend.</p>
 
-<div class="inline-flex rounded-lg bg-slate-200 p-1 mb-8">
+<div class="inline-flex rounded-lg bg-slate-200 p-1 mb-8 flex-wrap justify-center gap-1 md:gap-0">
 <button id="btnTabOpt1_Sprint" onclick="switchTimeline(1)" class="px-6 py-2.5 rounded-md text-sm font-semibold transition-all duration-200 text-slate-700 hover:text-[#002855]">
 🏢 Opción 1 (16 Semanas)
 </button>
-<button id="btnTabOpt2_Sprint" onclick="switchTimeline(2)" class="px-6 py-2.5 rounded-md text-sm font-semibold transition-all duration-200 bg-[#009639] text-white shadow-sm">
+<button id="btnTabOpt2_Sprint" onclick="switchTimeline(2)" class="px-6 py-2.5 rounded-md text-sm font-semibold transition-all duration-200 text-slate-700 hover:text-[#002855]">
 ⚖️ Opción 2 (12 Semanas)
+</button>
+<button id="btnTabOpt3_Sprint" onclick="switchTimeline(3)" class="px-6 py-2.5 rounded-md text-sm font-semibold transition-all duration-200 bg-[#D69E2E] text-white shadow-sm">
+🛠️ Opción 3 (13 Semanas)
 </button>
 </div>
 </div>
@@ -354,7 +396,7 @@ Explora la secuencia lógica del sistema. <strong>Haz clic en cualquier caja de 
 </div>
 
 <!-- Timeline Opción 2 (12 Semanas - 6 Sprints) -->
-<div id="timelineOpt2_Sprint" class="space-y-12">
+<div id="timelineOpt2_Sprint" class="space-y-12 hidden">
 <!-- SPRINT 1 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
 <div class="flex items-center justify-center bg-[#009639] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S1</div>
@@ -363,9 +405,85 @@ Explora la secuencia lógica del sistema. <strong>Haz clic en cualquier caja de 
 <span class="bg-emerald-50 text-[#009639] text-xs px-2.5 py-0.5 rounded-full font-bold uppercase">Sprint 1 / Sem 1-2</span>
 <h4 class="text-lg font-bold text-[#002855] mt-2">EC2, n8n Core e Interfaz Base en S3</h4>
 <p class="text-sm text-slate-600 mt-2">Configuración ágil de la instancia segura AWS EC2 con Docker. Creación de la ventana de chat estática HTML5/JS nativa en un bucket S3 + CloudFront conectando de forma directa.</p>
+</div>
+</div>
+<div class="hidden md:block w-1/2"></div>
+</div>
+<!-- SPRINT 2 -->
+<div class="relative flex flex-col md:flex-row items-start md:items-center">
+<div class="flex items-center justify-center bg-[#009639] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S2</div>
+<div class="hidden md:block w-1/2"></div>
+<div class="w-full md:w-1/2 md:pl-12 mt-4 md:mt-0">
+<div class="bg-white p-6 rounded-2xl card-elevation border-l-4 border-[#009639] inline-block w-full">
+<span class="bg-emerald-50 text-[#009639] text-xs px-2.5 py-0.5 rounded-full font-bold uppercase">Sprint 2 / Sem 3-4</span>
+<h4 class="text-lg font-bold text-[#002855] mt-2">Agente 1: El Enrutador Seguro y Memoria Postgres</h4>
+<p class="text-sm text-slate-600 mt-2">Implementación del primer agente en n8n enfocado en auditar la seguridad del prompt del usuario y enrutar la lógica conversacional de sesión.</p>
+</div>
+</div>
+</div>
+<!-- SPRINT 3 -->
+<div class="relative flex flex-col md:flex-row items-start md:items-center">
+<div class="flex items-center justify-center bg-[#009639] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S3</div>
+<div class="w-full md:w-1/2 md:pr-12 md:text-right mt-4 md:mt-0">
+<div class="bg-white p-6 rounded-2xl card-elevation border-r-4 border-[#009639] inline-block text-left w-full">
+<span class="bg-emerald-50 text-[#009639] text-xs px-2.5 py-0.5 rounded-full font-bold uppercase">Sprint 3 / Sem 5-6</span>
+<h4 class="text-lg font-bold text-[#002855] mt-2">Agente 2: El Analista de Datos (S3 Gold via Athena)</h4>
+<p class="text-sm text-slate-600 mt-2">Desarrollo del agente enfocado en "Tool Calling" de bases de datos. Diseñado para recibir esquemas semánticos de tablas Gold en S3 y traducirlos a sentencias SQL limpias.</p>
+</div>
+</div>
+<div class="hidden md:block w-1/2"></div>
+</div>
+<!-- SPRINT 4 -->
+<div class="relative flex flex-col md:flex-row items-start md:items-center">
+<div class="flex items-center justify-center bg-[#009639] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S4</div>
+<div class="hidden md:block w-1/2"></div>
+<div class="w-full md:w-1/2 md:pl-12 mt-4 md:mt-0">
+<div class="bg-white p-6 rounded-2xl card-elevation border-l-4 border-[#009639] inline-block w-full">
+<span class="bg-emerald-50 text-[#009639] text-xs px-2.5 py-0.5 rounded-full font-bold uppercase">Sprint 4 / Sem 7-8</span>
+<h4 class="text-lg font-bold text-[#002855] mt-2">Agente 3: El Sintetizador y Diseñador (Texto + JSON)</h4>
+<p class="text-sm text-slate-600 mt-2">Fusión lógica: el Agente 3 toma las tablas crudas de Athena, genera la síntesis conversacional de negocio en Bedrock y formatea simultáneamente los datos a JSON estructurado para gráficas.</p>
+</div>
+</div>
+</div>
+<!-- SPRINT 5 -->
+<div class="relative flex flex-col md:flex-row items-start md:items-center">
+<div class="flex items-center justify-center bg-[#009639] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S5</div>
+<div class="w-full md:w-1/2 md:pr-12 md:text-right mt-4 md:mt-0">
+<div class="bg-white p-6 rounded-2xl card-elevation border-r-4 border-[#009639] inline-block text-left w-full">
+<span class="bg-emerald-50 text-[#009639] text-xs px-2.5 py-0.5 rounded-full font-bold uppercase">Sprint 5 / Sem 9-10</span>
+<h4 class="text-lg font-bold text-[#002855] mt-2">Frontend Dinámico (Canvas & Chart.js)</h4>
+<p class="text-sm text-slate-600 mt-2">El desarrollador enfoca su capacidad en el cliente web S3: integración nativa mediante CDN de la librería responsiva de gráficos Chart.js.</p>
+</div>
+</div>
+<div class="hidden md:block w-1/2"></div>
+</div>
+<!-- SPRINT 6 -->
+<div class="relative flex flex-col md:flex-row items-start md:items-center">
+<div class="flex items-center justify-center bg-[#009639] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S6</div>
+<div class="hidden md:block w-1/2"></div>
+<div class="w-full md:w-1/2 md:pl-12 mt-4 md:mt-0">
+<div class="bg-white p-6 rounded-2xl card-elevation border-l-4 border-[#009639] inline-block w-full">
+<span class="bg-emerald-50 text-[#009639] text-xs px-2.5 py-0.5 rounded-full font-bold uppercase">Sprint 6 / Sem 11-12</span>
+<h4 class="text-lg font-bold text-[#002855] mt-2">Langfuse, Caché de Tokens y Paso a Producción</h4>
+<p class="text-sm text-slate-600 mt-2">Acoplamiento nativo del SDK de Langfuse en n8n para medir centavos de dólar y latencia de la Tríada. Activación de caché Redis en el EC2 para ahorrar costos de cómputo.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Timeline Opción 3 (13 Semanas - 6 Sprints) -->
+<div id="timelineOpt3_Sprint" class="space-y-12">
+<!-- SPRINT 1 -->
+<div class="relative flex flex-col md:flex-row items-start md:items-center">
+<div class="flex items-center justify-center bg-[#D69E2E] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S1</div>
+<div class="w-full md:w-1/2 md:pr-12 md:text-right mt-4 md:mt-0">
+<div class="bg-white p-6 rounded-2xl card-elevation border-r-4 border-[#D69E2E] inline-block text-left w-full">
+<span class="bg-amber-50 text-[#D69E2E] text-xs px-2.5 py-0.5 rounded-full font-bold uppercase">Sprint 1 / Sem 1-2</span>
+<h4 class="text-lg font-bold text-[#002855] mt-2">Docker, n8n Core e Interfaz de Chat en S3</h4>
+<p class="text-sm text-slate-600 mt-2">Aprovisionamiento de la instancia EC2 con Docker. Instalación de n8n y Postgres local. Despliegue de la UI de chat estática básica en un bucket cerrado en S3 y CloudFront.</p>
 <ul class="text-xs text-slate-500 mt-3 list-disc pl-4 space-y-1 text-left">
-<li><strong>Acción Frontend:</strong> Despliegue de la UI limpia del chat en S3 con CDN activa para pruebas tempranas.</li>
-<li>Configuración del webhook seguro de n8n para recibir peticiones HTTPS (TLS 1.3) desde el día uno.</li>
+<li><strong>Acción Frontend:</strong> Despliegue inmediato de la SPA estática para pruebas rápidas de red.</li>
+<li>Configuración del webhook de n8n con cabeceras de autorización Bearer (sin API Gateway inicial) para un desarrollo acelerado.</li>
 </ul>
 <div class="mt-3 flex justify-between items-center text-xs">
 <span class="text-emerald-600 font-semibold">Frontend: 100% Desarrollo</span>
@@ -378,20 +496,19 @@ Explora la secuencia lógica del sistema. <strong>Haz clic en cualquier caja de 
 
 <!-- SPRINT 2 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
-<div class="flex items-center justify-center bg-[#009639] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S2</div>
+<div class="flex items-center justify-center bg-[#D69E2E] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S2</div>
 <div class="hidden md:block w-1/2"></div>
 <div class="w-full md:w-1/2 md:pl-12 mt-4 md:mt-0">
-<div class="bg-white p-6 rounded-2xl card-elevation border-l-4 border-[#009639] inline-block w-full">
-<span class="bg-emerald-50 text-[#009639] text-xs px-2.5 py-0.5 rounded-full font-bold uppercase">Sprint 2 / Sem 3-4</span>
-<h4 class="text-lg font-bold text-[#002855] mt-2">Agente 1: El Enrutador Seguro y Memoria Postgres</h4>
-<p class="text-sm text-slate-600 mt-2">Implementación del primer agente en n8n enfocado en auditar la seguridad del prompt del usuario y enrutar la lógica conversacional de sesión.</p>
+<div class="bg-white p-6 rounded-2xl card-elevation border-l-4 border-[#D69E2E] inline-block w-full">
+<span class="bg-amber-50 text-[#D69E2E] text-xs px-2.5 py-0.5 rounded-full font-bold uppercase">Sprint 2 / Sem 3-4</span>
+<h4 class="text-lg font-bold text-[#002855] mt-2">Agente 1: El Enrutador Seguro y Memoria de Chat</h4>
+<p class="text-sm text-slate-600 mt-2">Estructuración en n8n de la lógica del Agente 1 para validación heurística contra inyecciones de código (Prompt Security) y auditorías de contexto.</p>
 <ul class="text-xs text-slate-500 mt-3 list-disc pl-4 space-y-1 text-left">
-<li><strong>Acción Frontend:</strong> Integración de LocalStorage en el JS del cliente para inyectar automáticamente un identificador de sesión (`session_id`) en cada consulta.</li>
-<li>Configuración de la persistencia de historial conversacional en PostgreSQL local dentro del EC2.</li>
+<li><strong>Acción Frontend:</strong> Inyección automática de un identificador persistente (`session_id`) usando LocalStorage para que n8n recupere el historial de sesión de Postgres.</li>
 </ul>
 <div class="mt-3 flex justify-between items-center text-xs">
 <span class="text-emerald-600 font-semibold">Frontend: Integración de Sesión</span>
-<span class="text-amber-600 font-semibold">Complejidad: Alta</span>
+<span class="text-[#00629B] font-semibold">Complejidad: Media-Alta</span>
 </div>
 </div>
 </div>
@@ -399,19 +516,19 @@ Explora la secuencia lógica del sistema. <strong>Haz clic en cualquier caja de 
 
 <!-- SPRINT 3 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
-<div class="flex items-center justify-center bg-[#009639] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S3</div>
+<div class="flex items-center justify-center bg-[#D69E2E] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S3</div>
 <div class="w-full md:w-1/2 md:pr-12 md:text-right mt-4 md:mt-0">
-<div class="bg-white p-6 rounded-2xl card-elevation border-r-4 border-[#009639] inline-block text-left w-full">
-<span class="bg-emerald-50 text-[#009639] text-xs px-2.5 py-0.5 rounded-full font-bold uppercase">Sprint 3 / Sem 5-6</span>
-<h4 class="text-lg font-bold text-[#002855] mt-2">Agente 2: El Analista de Datos (S3 Gold via Athena)</h4>
-<p class="text-sm text-slate-600 mt-2">Desarrollo del agente enfocado en "Tool Calling" de bases de datos. Diseñado para recibir esquemas semánticos de tablas Gold en S3 y traducirlos a sentencias SQL limpias.</p>
+<div class="bg-white p-6 rounded-2xl card-elevation border-r-4 border-[#D69E2E] inline-block text-left w-full">
+<span class="bg-amber-50 text-[#D69E2E] text-xs px-2.5 py-0.5 rounded-full font-bold uppercase">Sprint 3 / Sem 5-6</span>
+<h4 class="text-lg font-bold text-[#002855] mt-2">Agente 2: El Analista SQL (Conexión S3 Gold vía Athena)</h4>
+<p class="text-sm text-slate-600 mt-2">Desarrollo del Agente 2 en el mismo lienzo de n8n. Inyección de diccionario de datos estáticos en el prompt del LLM para garantizar generación SQL infalible.</p>
 <ul class="text-xs text-slate-500 mt-3 list-disc pl-4 space-y-1 text-left">
-<li><strong>Acción Frontend:</strong> Programación de estados dinámicos de carga Skeletons en el chat web para informar visualmente al usuario mientras Athena realiza el análisis físico de S3.</li>
-<li>Implementación del validador de reintentos síncronos y limitadores de filas en la query (`LIMIT 100`) para mitigar costos de escaneo.</li>
+<li>Implementación del conector de Amazon Athena en n8n para escanear y traer datos tabulares con cláusulas `LIMIT` y particionado de fechas.</li>
+<li><strong>Acción Frontend:</strong> Integración de loaders "Skeletons" animados que se muestran dinámicamente mientras el backend resuelve llamadas físicas a S3 Gold.</li>
 </ul>
 <div class="mt-3 flex justify-between items-center text-xs">
 <span class="text-emerald-600 font-semibold">Frontend: Skeletons e Esperas</span>
-<span class="text-[#00629b] font-semibold">Complejidad: Media</span>
+<span class="text-amber-600 font-semibold">Complejidad: Alta</span>
 </div>
 </div>
 </div>
@@ -420,19 +537,19 @@ Explora la secuencia lógica del sistema. <strong>Haz clic en cualquier caja de 
 
 <!-- SPRINT 4 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
-<div class="flex items-center justify-center bg-[#009639] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S4</div>
+<div class="flex items-center justify-center bg-[#D69E2E] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S4</div>
 <div class="hidden md:block w-1/2"></div>
 <div class="w-full md:w-1/2 md:pl-12 mt-4 md:mt-0">
-<div class="bg-white p-6 rounded-2xl card-elevation border-l-4 border-[#009639] inline-block w-full">
-<span class="bg-emerald-50 text-[#009639] text-xs px-2.5 py-0.5 rounded-full font-bold uppercase">Sprint 4 / Sem 7-8</span>
-<h4 class="text-lg font-bold text-[#002855] mt-2">Agente 3: El Sintetizador y Diseñador (Texto + JSON)</h4>
-<p class="text-sm text-slate-600 mt-2">Fusión lógica: el Agente 3 toma las tablas crudas de Athena, genera la síntesis conversacional de negocio en Bedrock y formatea simultáneamente los datos a JSON estructurado para gráficas.</p>
+<div class="bg-white p-6 rounded-2xl card-elevation border-l-4 border-[#D69E2E] inline-block w-full">
+<span class="bg-amber-50 text-[#D69E2E] text-xs px-2.5 py-0.5 rounded-full font-bold uppercase">Sprint 4 / Sem 7-8</span>
+<h4 class="text-lg font-bold text-[#002855] mt-2">Agente 3 y Agente 4: Sintetizador y Nodo JS en n8n</h4>
+<p class="text-sm text-slate-600 mt-2">Implementación del Agente 3 enfocado en redacción empática e inyección de contexto empresarial. Desarrollo inmediato del Agente 4.</p>
 <ul class="text-xs text-slate-500 mt-3 list-disc pl-4 space-y-1 text-left">
-<li>Ajuste de guardrails heurísticos para evitar contradicciones entre el dato bruto de Athena y el texto generado por el LLM (control de alucinaciones integrado).</li>
+<li><strong>La Clave del Agente 4:</strong> En lugar de usar IA, se programa un nodo de código JavaScript estático nativo en n8n que toma los datos tabulares de Athena y los convierte en el arreglo JSON que Chart.js espera, agilizando el desarrollo.</li>
 </ul>
 <div class="mt-3 flex justify-between items-center text-xs">
 <span class="text-slate-400 font-semibold">Frontend: Inactivo</span>
-<span class="text-amber-600 font-semibold">Complejidad: Alta</span>
+<span class="text-blue-600 font-semibold">Complejidad: Media</span>
 </div>
 </div>
 </div>
@@ -440,19 +557,19 @@ Explora la secuencia lógica del sistema. <strong>Haz clic en cualquier caja de 
 
 <!-- SPRINT 5 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
-<div class="flex items-center justify-center bg-[#009639] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S5</div>
+<div class="flex items-center justify-center bg-[#D69E2E] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S5</div>
 <div class="w-full md:w-1/2 md:pr-12 md:text-right mt-4 md:mt-0">
-<div class="bg-white p-6 rounded-2xl card-elevation border-r-4 border-[#009639] inline-block text-left w-full">
-<span class="bg-emerald-50 text-[#009639] text-xs px-2.5 py-0.5 rounded-full font-bold uppercase">Sprint 5 / Sem 9-10</span>
-<h4 class="text-lg font-bold text-[#002855] mt-2">Frontend Dinámico (Canvas & Chart.js)</h4>
-<p class="text-sm text-slate-600 mt-2">El desarrollador enfoca su capacidad en el cliente web S3: integración nativa mediante CDN de la librería responsiva de gráficos Chart.js.</p>
+<div class="bg-white p-6 rounded-2xl card-elevation border-r-4 border-[#D69E2E] inline-block text-left w-full">
+<span class="bg-amber-50 text-[#D69E2E] text-xs px-2.5 py-0.5 rounded-full font-bold uppercase">Sprint 5 / Sem 9-10</span>
+<h4 class="text-lg font-bold text-[#002855] mt-2">Agente 5 (Freno de Calidad) e Integración de Chart.js</h4>
+<p class="text-sm text-slate-600 mt-2">Desarrollo del Agente 5 para validación heurística mediante un nodo IF/ELSE rápido alimentado por un prompt de validación de bajo consumo (GPT-4o-mini).</p>
 <ul class="text-xs text-slate-500 mt-3 list-disc pl-4 space-y-1 text-left">
-<li>Programación de escuchas AJAX/Fetch en JavaScript para deserializar la clave `"graph_data"` del payload JSON de n8n.</li>
-<li>Generación dinámica del canvas dentro del hilo de la burbuja de chat para renderizar barras y tendencias en tiempo real.</li>
+<li><strong>Acción Frontend:</strong> Integración y acoplamiento dinámico de la librería Chart.js en la página web.</li>
+<li>Escucha en JS para interceptar el JSON de la gráfica e insertarlo en una burbuja de chat especial mediante Canvas.</li>
 </ul>
 <div class="mt-3 flex justify-between items-center text-xs">
 <span class="text-emerald-600 font-semibold">Frontend: Pintado de Gráficos JS</span>
-<span class="text-[#00629b] font-semibold">Complejidad: Media</span>
+<span class="text-amber-600 font-semibold">Complejidad: Alta</span>
 </div>
 </div>
 </div>
@@ -461,20 +578,20 @@ Explora la secuencia lógica del sistema. <strong>Haz clic en cualquier caja de 
 
 <!-- SPRINT 6 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
-<div class="flex items-center justify-center bg-[#009639] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S6</div>
+<div class="flex items-center justify-center bg-[#D69E2E] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S6</div>
 <div class="hidden md:block w-1/2"></div>
 <div class="w-full md:w-1/2 md:pl-12 mt-4 md:mt-0">
-<div class="bg-white p-6 rounded-2xl card-elevation border-l-4 border-[#009639] inline-block w-full">
-<span class="bg-emerald-50 text-[#009639] text-xs px-2.5 py-0.5 rounded-full font-bold uppercase">Sprint 6 / Sem 11-12</span>
+<div class="bg-white p-6 rounded-2xl card-elevation border-l-4 border-[#D69E2E] inline-block w-full">
+<span class="bg-amber-50 text-[#D69E2E] text-xs px-2.5 py-0.5 rounded-full font-bold uppercase">Sprint 6 / Sem 11-13</span>
 <h4 class="text-lg font-bold text-[#002855] mt-2">Langfuse, Caché de Tokens y Paso a Producción</h4>
-<p class="text-sm text-slate-600 mt-2">Acoplamiento nativo del SDK de Langfuse en n8n para medir centavos de dólar y latencia de la Tríada. Activación de caché Redis en el EC2 para ahorrar costos de cómputo.</p>
+<p class="text-sm text-slate-600 mt-2">Cierre técnico del proyecto. Se añade holgura de 3 semanas completas para la migración formal a Amazon Bedrock, pruebas con Langfuse y optimización de base de datos en caché para contención de costos.</p>
 <ul class="text-xs text-slate-500 mt-3 list-disc pl-4 space-y-1 text-left">
-<li>Automatización del volcado asíncrono diario de logs conversacionales comprimidos hacia buckets encriptados en S3 para auditorías.</li>
-<li>Migración del flujo a los endpoints productivos de Bedrock y pruebas de QA end-to-end con el Frontend en S3.</li>
+<li>Configuración del volcado programado diario de logs a S3.</li>
+<li>Alineación de seguridad final del Frontend estático de S3 agregando políticas y ruteos HTTPS definitivos.</li>
 </ul>
 <div class="mt-3 flex justify-between items-center text-xs">
-<span class="text-emerald-600 font-semibold">Frontend: QA y Cierre</span>
-<span class="text-emerald-600 font-semibold">Complejidad: Baja</span>
+<span class="text-emerald-600 font-semibold">Frontend: QA y Cierre Técnico</span>
+<span class="text-[#00629b] font-semibold">Complejidad: Baja</span>
 </div>
 </div>
 </div>
@@ -488,18 +605,19 @@ Explora la secuencia lógica del sistema. <strong>Haz clic en cualquier caja de 
 <section id="metricas" class="scroll-mt-24">
 <div class="text-center mb-12">
 <h2 class="text-3xl font-bold text-[#002855] mb-2">Métricas Adaptadas (1 Dev)</h2>
-<p class="text-slate-600 max-w-2xl mx-auto">Visualización del impacto del ajuste arquitectónico utilizando una estructura de Tríada de Agentes en n8n.</p>
+<p class="text-slate-600 max-w-2xl mx-auto">Visualización del impacto del ajuste arquitectónico utilizando un único plano de n8n para centralizar el flujo de agentes lógicos.</p>
 </div>
 
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
 <div class="bg-white rounded-2xl p-6 card-elevation border border-slate-100">
 <h3 class="text-xl font-bold text-[#002855] mb-2">Carga de Semanas (Realidad 1 Persona)</h3>
-<p class="text-sm text-slate-500 mb-4">La Tríada de 3 Agentes (Opción 2) ahorra 4 semanas vitales al evitar la configuración estricta de red (ALB, VPC) requerida en la Opción 1.</p>
-<div class="text-xs text-slate-600 mb-6 space-y-2 bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm">
+<p class="text-sm text-slate-500 mb-4">La unificación del flujo en un único plano de n8n (Opción 2 y Opción 3) ahorra entre 3 y 4 semanas críticas al omitir la infraestructura de red pesada de AWS.</p>
+<div class="text-xs text-slate-600 mb-6 space-y-2 bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm text-justify">
     <p class="font-bold text-[#002855] text-sm mb-1">📊 Análisis del Tiempo:</p>
     <ul class="list-disc pl-4 space-y-2">
-        <li><strong>Opción 1 (16 Semanas):</strong> Es penalizada drásticamente por la curva de configuración de infraestructura pura. Un solo desarrollador perdería un mes entero configurando y asegurando API Gateway, Balanceadores de Carga y subredes cerradas en AWS antes de poder enfocarse en la IA.</li>
-        <li><strong>Opción 2 (12 Semanas):</strong> Reduce el ciclo de desarrollo en un 25% (un mes completo de ahorro). Al habilitar al Frontend en S3 para comunicarse de forma directa y segura con el Webhook de n8n, el desarrollador invierte su tiempo en afinar los prompts y la lógica del negocio en lugar de luchar con configuraciones de red.</li>
+        <li><strong>Opción 1 (16 Semanas):</strong> Es penalizada por la infraestructura pura. Un solo desarrollador perdería un mes configurando y asegurando API Gateway, Balanceadores de Carga y subredes cerradas en AWS antes de poder enfocarse en la lógica conversacional.</li>
+        <li><strong>Opción 2 (12 Semanas):</strong> El ciclo más rápido. Minimiza componentes y se concentra en un flujo cognitivo directo de solo 3 agentes.</li>
+        <li><strong>Opción 3 (13 Semanas):</strong> El balance óptimo si se requiere conservar los 5 agentes. Al unificar los 5 agentes dentro de un mismo lienzo visual de n8n (eliminando sub-flujos de red complejos) y usar un nodo de código JS estático para las gráficas, el desarrollador conserva el diseño original con solo una semana adicional sobre la Opción 2.</li>
     </ul>
 </div>
 <div class="chart-container">
@@ -509,14 +627,13 @@ Explora la secuencia lógica del sistema. <strong>Haz clic en cualquier caja de 
 
 <div class="bg-white rounded-2xl p-6 card-elevation border border-slate-100">
 <h3 class="text-xl font-bold text-[#002855] mb-2">Matriz de Eficiencia (1 Dev)</h3>
-<p class="text-sm text-slate-500 mb-4">Dividir el prompt en la Tríada de 3 agentes mejora notablemente la mantenibilidad de infraestructura, velocidad de desarrollo y eficiencia de seguridad corporativa.</p>
-<div class="text-xs text-slate-600 mb-6 space-y-2 bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm">
+<p class="text-sm text-slate-500 mb-4">La unificación en un solo lienzo de n8n eleva notablemente la mantenibilidad y la velocidad de desarrollo preservando la precisión de la IA.</p>
+<div class="text-xs text-slate-600 mb-6 space-y-2 bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm text-justify">
     <p class="font-bold text-[#002855] text-sm mb-1">📊 Análisis de los 6 Ejes (Incluyendo Seguridad):</p>
     <ul class="list-disc pl-4 space-y-2 bg-transparent border-0 shadow-none">
-        <li><strong>Mantenibilidad y Simplicidad:</strong> La Opción 2 domina este aspecto. Para 1 recurso humano, orquestar 3 agentes en un solo flujo visual de n8n es infinitamente más fácil de depurar que rastrear errores en 5 Lambdas distribuidas en AWS.</li>
-        <li><strong>Eficiencia de Costo:</strong> La Opción 2 evita los cobros fijos por hora que exigen los ALB de AWS y minimiza el gasto en tokens de Bedrock al inyectar el historial de chat de forma inteligente únicamente a los Agentes 1 y 3 (el Agente 2 de SQL no requiere historial, reduciendo un 40% el uso de tokens).</li>
-        <li><strong>Precisión IA:</strong> La Tríada mantiene una alta precisión mitigando las alucinaciones al aislar estrictamente la lógica de generación SQL (Agente 2) del formateo de lenguaje natural (Agente 3).</li>
-        <li><strong>Seguridad Enterprise:</strong> La Opción 1 cuenta con el blindaje físico perimetral más robusto al aislar n8n en subredes privadas (VPC) protegidas por ALB y AWS WAF en API Gateway (Puntaje: 5/5). Sin embargo, la Opción 2 responde con un estándar de seguridad excelente (Puntaje: 4/5) mediante cifrado TLS 1.3 en tránsito y autenticación robusta mediante firmas secretas Bearer en el webhook de n8n, lo cual es óptimo y suficiente para operaciones comerciales sin la sobrecarga de administración de redes complejas.</li>
+        <li><strong>Mantenibilidad y Simplicidad:</strong> La Opción 3 unificada y la Opción 2 dominan este aspecto. Para una sola persona, es infinitamente más fácil de depurar un único flujo en n8n que rastrear fallos en 5 Lambdas distribuidas en AWS.</li>
+        <li><strong>Precisión IA:</strong> La Opción 3 (Monolito 5 Agentes) y la Opción 1 obtienen puntuación máxima (5/5). Al conservar los 5 agentes lógicos, el sistema cuenta con un Agente 1 (Seguridad) y un Agente 5 (Supervisor de Calidad) dedicados, lo que elimina casi en su totalidad la posibilidad de alucinaciones corporativas.</li>
+        <li><strong>Seguridad Enterprise:</strong> La Opción 1 cuenta con el blindaje perimetral más robusto al aislar n8n en VPCs privadas protegidas por ALB y AWS WAF (Puntaje: 5/5). Las Opciones 2 y 3 (Puntaje: 4/5 y 4.5/5 respectivamente) responden con un estándar de seguridad excelente mediante cifrado TLS 1.3 y autenticación Bearer Token, suficiente para una operación ágil sin la pesadilla de mantenimiento de la primera.</li>
     </ul>
 </div>
 <div class="chart-container">
@@ -533,24 +650,24 @@ Explora la secuencia lógica del sistema. <strong>Haz clic en cualquier caja de 
 <h2 class="text-3xl font-extrabold mb-6 flex items-center text-white">
 <span class="text-4xl mr-4">🎯</span> Recomendación Ajustada
 </h2>
-<p class="text-lg md:text-xl text-slate-100 mb-8 leading-relaxed max-w-4xl">
-Con un equipo de <strong>1 sola persona</strong>, la decisión técnica sensata, viable y económica es implementar la <strong>Opción 2: La Tríada de 3 Agentes en n8n (12 semanas)</strong>. Evita el "infierno" de redes de AWS, pero preserva la modularidad de la IA para un control absoluto contra alucinaciones.
+<p class="text-lg md:text-xl text-slate-100 mb-8 leading-relaxed max-w-4xl text-justify">
+Si el equipo de Daiichi-Sankyo exige que se implemente el diseño original de <strong>5 agentes</strong> para blindar por completo la precisión de la IA contra alucinaciones, la decisión técnica óptima para un equipo de 1 sola persona es implementar la **Opción 3 (Monolito de 5 Agentes en n8n - 13 semanas)**. Te da el control absoluto contra alucinaciones sin la sobrecarga operativa de redes de AWS.
 </p>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl">
 <div class="text-3xl mb-3">🧩</div>
-<h4 class="font-bold text-xl mb-2 text-[#FFD100]">Aislamiento Lógico</h4>
-<p class="text-sm text-slate-200 font-medium">Al separar la IA en 3, el Agente Enrutador y el Analista de Datos operan sin contaminar el prompt del Sintetizador.</p>
+<h4 class="font-bold text-xl mb-2 text-[#FFD100]">Aislamiento Unificado</h4>
+<p class="text-xs text-slate-200 font-medium">Los 5 agentes lógicos operan de manera secuencial pero compartiendo memoria JSON nativa de n8n, eliminando pases de red lentos.</p>
 </div>
 <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl">
 <div class="text-3xl mb-3">⏳</div>
-<h4 class="font-bold text-xl mb-2 text-[#FFD100]">Desarrollo Sostenible</h4>
-<p class="text-sm text-slate-200 font-medium">12 semanas quitan la soga del cuello al desarrollador, permitiéndole cambiar de rol y asegurar un QA sólido.</p>
+<h4 class="font-bold text-xl mb-2 text-[#FFD100]">Desarrollo Viable</h4>
+<p class="text-xs text-slate-200 font-medium">13 semanas con holgura permiten al desarrollador enfocar la segunda mitad del proyecto en el QA de Athena y Chart.js.</p>
 </div>
 <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl">
 <div class="text-3xl mb-3">🕸️</div>
-<h4 class="font-bold text-xl mb-2 text-[#FFD100]">Red Simplificada</h4>
-<p class="text-sm text-slate-200 font-medium">Conexión directa segura Frontend -> n8n elimina 4 semanas completas de dolores de cabeza en infraestructura.</p>
+<h4 class="font-bold text-xl mb-2 text-[#FFD100]">Seguridad Directa</h4>
+<p class="text-xs text-slate-200 font-medium">Ruteo directo HTTPS y validaciones Bearer inyectadas de lado del cliente protegen el webhook de accesos externos.</p>
 </div>
 </div>
 </div>
@@ -577,31 +694,44 @@ const flowDatabase = {
         n8n: { title: "n8n (La Tríada de 3 Agentes)", icon: "⚙️", desc: "Recibe el webhook de red. El Agente 1 (Enrutador) valida la seguridad y carga el historial. El Agente 2 (Analista) consulta Athena. El Agente 3 (Sintetizador) redacta la respuesta y formatea el JSON gráfico.", security: "Webhook autenticado con Bearer Token", payload: "Input: `user_query` + `session_id` <br>Output: JSON con respuesta de texto y gráfica" },
         dat: { title: "Bedrock & Athena", icon: "🧠", desc: "Bedrock ejecuta llamadas cognitivas eficientes de rol único. El Agente 2 invoca a Athena usando 'Tools Calling' para extraer datos refinados de S3 Gold de forma síncrona.", security: "Conexión interna segura vía AWS IAM Roles", payload: "Input: SQL Computado con `LIMIT` <br>Output: Matriz estructurada de datos de negocio" },
         trc: { title: "Langfuse & S3 Logs", icon: "📊", desc: "Captura de telemetría de solo 3 agentes consolidados (ahorrando procesamiento de red). Realiza respaldos automáticos diarios de auditoría en buckets encriptados de S3.", security: "KMS Encryption / Políticas de S3 cerradas", payload: "Input: Logs y costos transaccionales <br>Output: Trazas e histórico de auditoría seguro" }
+    },
+    option3: {
+        usr: { title: "Usuario Final", icon: "👤", desc: "Escribe su pregunta en la interfaz de chat. El Frontend asume validaciones estáticas primarias de inyecciones antes del envío.", security: "Sanitización del lado del cliente", payload: "Input: Pregunta corporativa <br>Output: Payload estructurado en JSON" },
+        s3c: { title: "S3 Frontend & CloudFront CDN", icon: "🗂️", desc: "La aplicación web estática realiza una llamada Fetch HTTPS directa hacia el webhook de n8n, omitiendo intermediarios de red complejos de AWS en fase inicial.", security: "Cifrado en tránsito TLS 1.3 / OAC S3", payload: "Input: HTTPS POST Request <br>Output: Handshake seguro establecido" },
+        n8n: { title: "n8n (5 Agentes en 1 Flujo)", icon: "⚙️", desc: "Los 5 agentes lógicos secuenciales (Validador, SQL Gen, Redactor, JS Formatter, Validador Heurístico) residen y comparten memoria interna en el mismo lienzo de n8n.", security: "Webhook autenticado por cabecera de secreto", payload: "Input: `user_query` + `session_id` <br>Output: JSON unificado de respuesta" },
+        dat: { title: "Bedrock & Athena (Capa Gold)", icon: "🧠", desc: "El Agente 2 de n8n traduce la pregunta a SQL consultando la capa Gold en S3 vía Athena de forma síncrona, usando límites de filas estrictos para ahorro financiero.", security: "AWS IAM Roles internos de n8n EC2", payload: "Input: SQL compilado optimizado <br>Output: Datos brutos de negocio tabulares" },
+        trc: { title: "Langfuse & Auditoría S3", icon: "📊", desc: "Langfuse traza el rendimiento de los 5 agentes unificados. n8n ejecuta un volcado programado automático diario de logs de auditoría conversacionales a S3.", security: "Encriptación de buckets S3 mediante SSE-KMS", payload: "Input: Telemetría de prompts de n8n <br>Output: Logs históricos de auditoría" }
     }
 };
 
-let activeNodes = { 1: 'usr', 2: 'usr' };
+let activeNodes = { 1: 'usr', 2: 'usr', 3: 'usr' };
 
 function selectNode(option, nodeId) {
     activeNodes[option] = nodeId;
-    const flowContainer = document.getElementById(option === 1 ? 'archFlow1' : 'archFlow2');
+    const flowContainer = document.getElementById(option === 1 ? 'archFlow1' : (option === 2 ? 'archFlow2' : 'archFlow3'));
     const boxes = flowContainer.getElementsByClassName('flow-box');
     
     for (let box of boxes) {
-        box.classList.remove('scale-105', 'shadow-lg', 'ring-2', 'ring-blue-400', 'ring-emerald-400', 'font-bold');
+        box.classList.remove('scale-105', 'shadow-lg', 'ring-2', 'ring-blue-400', 'ring-emerald-400', 'ring-amber-400', 'font-bold');
         if (box.id.startsWith('node1_usr')) box.className = "flow-box bg-[#002855] text-white border-[#002855] hover:scale-105 active:scale-95 shadow-md";
         else if (box.id.startsWith('node2_usr')) box.className = "flow-box bg-[#009639] text-white border-[#009639] hover:scale-105 active:scale-95 shadow-md";
+        else if (box.id.startsWith('node3_usr')) box.className = "flow-box bg-[#D69E2E] text-white border-[#D69E2E] hover:scale-105 active:scale-95 shadow-md";
         else {
             if (box.id.startsWith('node1')) {
                 if (box.id.includes('n8n')) box.className = "flow-box bg-blue-100 text-[#002855] border-[#00629B] hover:scale-105 active:scale-95 flex flex-col";
                 else if (box.id.includes('dat')) box.className = "flow-box bg-emerald-100 text-emerald-800 border-emerald-300 hover:scale-105 active:scale-95 flex flex-col";
                 else if (box.id.includes('trc')) box.className = "flow-box bg-purple-100 text-purple-800 border-purple-300 hover:scale-105 active:scale-95";
                 else box.className = "flow-box bg-sky-50 text-sky-800 border-sky-200 hover:border-[#00629B] hover:scale-105 active:scale-95";
-            } else {
+            } else if (box.id.startsWith('node2')) {
                 if (box.id.includes('n8n')) box.className = "flow-box bg-emerald-100 text-[#002855] border-[#009639] hover:scale-105 active:scale-95 flex flex-col";
                 else if (box.id.includes('dat')) box.className = "flow-box bg-emerald-200 text-emerald-900 border-emerald-400 hover:scale-105 active:scale-95 flex flex-col";
                 else if (box.id.includes('trc')) box.className = "flow-box bg-purple-100 text-purple-800 border-purple-300 hover:scale-105 active:scale-95";
                 else box.className = "flow-box bg-emerald-50 text-emerald-800 border-emerald-200 hover:border-[#009639] hover:scale-105 active:scale-95 flex flex-col";
+            } else {
+                if (box.id.includes('n8n')) box.className = "flow-box bg-amber-100 text-[#002855] border-[#D69E2E] hover:scale-105 active:scale-95 flex flex-col";
+                else if (box.id.includes('dat')) box.className = "flow-box bg-amber-200 text-amber-900 border-amber-400 hover:scale-105 active:scale-95 flex flex-col";
+                else if (box.id.includes('trc')) box.className = "flow-box bg-purple-100 text-purple-800 border-purple-300 hover:scale-105 active:scale-95";
+                else box.className = "flow-box bg-amber-50 text-amber-800 border-amber-200 hover:border-[#D69E2E] hover:scale-105 active:scale-95 flex flex-col";
             }
         }
     }
@@ -610,10 +740,11 @@ function selectNode(option, nodeId) {
     if (selectedBox) {
         selectedBox.classList.add('scale-105', 'shadow-lg', 'font-bold');
         if (option === 1) selectedBox.classList.add('ring-2', 'ring-blue-500');
-        else selectedBox.classList.add('ring-2', 'ring-emerald-500');
+        else if (option === 2) selectedBox.classList.add('ring-2', 'ring-emerald-500');
+        else selectedBox.classList.add('ring-2', 'ring-amber-500');
     }
     
-    const dbKey = option === 1 ? 'option1' : 'option2';
+    const dbKey = option === 1 ? 'option1' : (option === 2 ? 'option2' : 'option3');
     const data = flowDatabase[dbKey][nodeId];
     if (data) {
         document.getElementById('detailIcon').innerText = data.icon;
@@ -624,29 +755,41 @@ function selectNode(option, nodeId) {
         
         const iconContainer = document.getElementById('detailIcon');
         if (option === 1) iconContainer.className = "p-2 bg-blue-600 text-white rounded-lg text-lg";
-        else iconContainer.className = "p-2 bg-emerald-600 text-white rounded-lg text-lg";
+        else if (option === 2) iconContainer.className = "p-2 bg-emerald-600 text-white rounded-lg text-lg";
+        else iconContainer.className = "p-2 bg-amber-600 text-white rounded-lg text-lg";
     }
 }
 
 function switchArchFlow(option) {
     const archFlow1 = document.getElementById('archFlow1');
     const archFlow2 = document.getElementById('archFlow2');
+    const archFlow3 = document.getElementById('archFlow3');
     const btn1 = document.getElementById('btnArchOpt1');
     const btn2 = document.getElementById('btnArchOpt2');
+    const btn3 = document.getElementById('btnArchOpt3');
     
+    archFlow1.classList.add('hidden'); 
+    archFlow2.classList.add('hidden');
+    archFlow3.classList.add('hidden');
+    
+    btn1.className = "px-4 py-2 rounded-md text-xs font-semibold transition-all duration-200 text-slate-700 hover:text-[#002855]";
+    btn2.className = "px-4 py-2 rounded-md text-xs font-semibold transition-all duration-200 text-slate-700 hover:text-[#002855]";
+    btn3.className = "px-4 py-2 rounded-md text-xs font-semibold transition-all duration-200 text-slate-700 hover:text-[#002855]";
+
     if (option === 1) {
-        archFlow1.classList.remove('hidden'); archFlow2.classList.add('hidden');
-        btn1.className = "px-5 py-2 rounded-md text-xs font-semibold transition-all duration-200 bg-[#002855] text-white shadow-sm";
-        btn2.className = "px-5 py-2 rounded-md text-xs font-semibold transition-all duration-200 text-slate-700 hover:text-[#002855]";
+        archFlow1.classList.remove('hidden');
+        btn1.className = "px-4 py-2 rounded-md text-xs font-semibold transition-all duration-200 bg-[#002855] text-white shadow-sm";
+    } else if (option === 2) {
+        archFlow2.classList.remove('hidden');
+        btn2.className = "px-4 py-2 rounded-md text-xs font-semibold transition-all duration-200 bg-[#009639] text-white shadow-sm";
     } else {
-        archFlow1.classList.add('hidden'); archFlow2.classList.remove('hidden');
-        btn1.className = "px-5 py-2 rounded-md text-xs font-semibold transition-all duration-200 text-slate-700 hover:text-[#002855]";
-        btn2.className = "px-5 py-2 rounded-md text-xs font-semibold transition-all duration-200 bg-[#009639] text-white shadow-sm";
+        archFlow3.classList.remove('hidden');
+        btn3.className = "px-4 py-2 rounded-md text-xs font-semibold transition-all duration-200 bg-[#D69E2E] text-white shadow-sm";
     }
     selectNode(option, 'usr');
 }
 
-window.addEventListener('load', () => { selectNode(2, 'usr'); });
+window.addEventListener('load', () => { selectNode(3, 'usr'); });
 
 function handleKeyPress(event) { if (event.key === 'Enter') sendSimulatedMessage(); }
 
@@ -702,17 +845,28 @@ function sendSimulatedMessage() {
 function switchTimeline(option) {
     const opt1 = document.getElementById('timelineOpt1_Sprint');
     const opt2 = document.getElementById('timelineOpt2_Sprint');
+    const opt3 = document.getElementById('timelineOpt3_Sprint');
     const btn1 = document.getElementById('btnTabOpt1_Sprint');
     const btn2 = document.getElementById('btnTabOpt2_Sprint');
+    const btn3 = document.getElementById('btnTabOpt3_Sprint');
+
+    opt1.classList.add('hidden'); 
+    opt2.classList.add('hidden');
+    opt3.classList.add('hidden');
+
+    btn1.className = "px-6 py-2.5 rounded-md text-sm font-semibold transition-all duration-200 text-slate-700 hover:text-[#002855]";
+    btn2.className = "px-6 py-2.5 rounded-md text-sm font-semibold transition-all duration-200 text-slate-700 hover:text-[#002855]";
+    btn3.className = "px-6 py-2.5 rounded-md text-sm font-semibold transition-all duration-200 text-slate-700 hover:text-[#002855]";
 
     if (option === 1) {
-        opt1.classList.remove('hidden'); opt2.classList.add('hidden');
+        opt1.classList.remove('hidden'); 
         btn1.className = "px-6 py-2.5 rounded-md text-sm font-semibold transition-all duration-200 bg-[#002855] text-white shadow-sm";
-        btn2.className = "px-6 py-2.5 rounded-md text-sm font-semibold transition-all duration-200 text-slate-700 hover:text-[#002855]";
-    } else {
-        opt1.classList.add('hidden'); opt2.classList.remove('hidden');
-        btn1.className = "px-6 py-2.5 rounded-md text-sm font-semibold transition-all duration-200 text-slate-700 hover:text-[#002855]";
+    } else if (option === 2) {
+        opt2.classList.remove('hidden'); 
         btn2.className = "px-6 py-2.5 rounded-md text-sm font-semibold transition-all duration-200 bg-[#009639] text-white shadow-sm";
+    } else {
+        opt3.classList.remove('hidden'); 
+        btn3.className = "px-6 py-2.5 rounded-md text-sm font-semibold transition-all duration-200 bg-[#D69E2E] text-white shadow-sm";
     }
 }
 
@@ -731,8 +885,8 @@ const ctxTimeline = document.getElementById('timelineChart').getContext('2d');
 new Chart(ctxTimeline, {
     type: 'bar',
     data: {
-        labels: ['Opción 1: Enterprise Distribuida', 'Opción 2: Equilibrio (3 Agentes)'].map(wrapLabel),
-        datasets: [{ label: 'Semanas (1 Dev)', data: [16, 12], backgroundColor: ['#00629B', '#009639'], borderRadius: 4 }]
+        labels: ['Opción 1: Enterprise Distribuida', 'Opción 2: Equilibrio (3 Agentes)', 'Opción 3: Monolito de 5 Agentes'].map(wrapLabel),
+        datasets: [{ label: 'Semanas (1 Dev)', data: [16, 12, 13], backgroundColor: ['#00629B', '#009639', '#D69E2E'], borderRadius: 4 }]
     },
     options: {
         responsive: true, maintainAspectRatio: false, indexAxis: 'y',
@@ -747,8 +901,9 @@ new Chart(ctxRadar, {
     data: {
         labels: ['Velocidad de Dev', 'Simplicidad de Infra', 'Precisión IA', 'Eficiencia Costo', 'Mantenibilidad (1 Dev)', 'Seguridad Enterprise'].map(wrapLabel),
         datasets: [
-            { label: 'Opción 1 (Enterprise)', data: [1, 1, 5, 2, 2, 5], backgroundColor: 'rgba(0, 98, 155, 0.2)', borderColor: '#00629B', borderWidth: 2 },
-            { label: 'Opción 2 (3 Agentes)', data: [4, 4, 4, 4, 5, 4], backgroundColor: 'rgba(0, 150, 57, 0.2)', borderColor: '#009639', borderWidth: 2 }
+            { label: 'Opción 1 (Enterprise)', data: [1, 1, 5, 2, 2, 5], backgroundColor: 'rgba(0, 98, 155, 0.1)', borderColor: '#00629B', borderWidth: 2 },
+            { label: 'Opción 2 (3 Agentes)', data: [4, 4, 4, 4, 5, 4], backgroundColor: 'rgba(0, 150, 57, 0.1)', borderColor: '#009639', borderWidth: 2 },
+            { label: 'Opción 3 (Monolito 5 Ag)', data: [3.5, 4, 5, 4.5, 4.5, 4.5], backgroundColor: 'rgba(214, 158, 46, 0.1)', borderColor: '#D69E2E', borderWidth: 2 }
         ]
     },
     options: { responsive: true, maintainAspectRatio: false, scales: { r: { beginAtZero: true, max: 5, ticks: { display: false } } } }
