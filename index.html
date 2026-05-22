@@ -34,6 +34,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background-co
 <a href="#arquitectura" class="hover:text-[#FFD100] transition-colors">Flujos de Arquitectura</a>
 <a href="#cronogramas" class="hover:text-[#FFD100] transition-colors">Sprints de Desarrollo</a>
 <a href="#metricas" class="hover:text-[#FFD100] transition-colors">Métricas de Rendimiento</a>
+<a href="#plan-ingenieria" class="hover:text-[#FFD100] transition-colors">Plan de Ingeniería Op.3</a>
 <a href="#recomendacion" class="hover:text-[#FFD100] transition-colors">Recomendación Final</a>
 </div>
 </div>
@@ -43,7 +44,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background-co
 <header class="bg-gradient-to-br from-[#002855] via-[#004B87] to-[#00629B] text-white py-16 px-4">
 <div class="max-w-5xl mx-auto text-center">
 <div class="flex justify-center mb-6">
-    
+   
 </div>
 <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-white">Análisis Técnico y Plan del Chatbot</h1>
 <p class="text-base md:text-lg text-slate-200 max-w-3xl mx-auto leading-relaxed">
@@ -54,7 +55,6 @@ Evaluación de arquitectura de agentes lógicos para Daiichi-Sankyo. Comparamos 
 
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
 
-<!-- Sección de Resumen Ejecutivo -->
 <section id="resumen" class="scroll-mt-24">
 <div class="mb-8 text-center">
 <h2 class="text-3xl font-bold text-[#002855] mb-2">Resumen de Opciones Holísticas</h2>
@@ -62,7 +62,6 @@ Evaluación de arquitectura de agentes lógicos para Daiichi-Sankyo. Comparamos 
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- OPCIÓN 1 -->
 <div class="bg-white rounded-2xl p-6 card-elevation border-t-8 border-[#00629B] flex flex-col h-full">
 <div class="text-3xl mb-3">🏢</div>
 <h3 class="text-xl font-bold text-[#002855] mb-2">Opción 1: Enterprise Distribuida</h3>
@@ -79,11 +78,10 @@ Evaluación de arquitectura de agentes lógicos para Daiichi-Sankyo. Comparamos 
 </div>
 </div>
 
-<!-- OPCIÓN 2 -->
 <div class="bg-white rounded-2xl p-6 card-elevation border-t-8 border-[#009639] flex flex-col h-full">
 <div class="text-3xl mb-3">⚖️</div>
 <h3 class="text-xl font-bold text-[#009639] mb-2">Opción 2: El Equilibrio de la Tríada</h3>
-<p class="text-xs text-slate-600 mb-6 flex-grow">Elimina intermediarios complejos de red y conecta el chat de S3 directamente a n8n. Condensa la lógica cognitiva de negocio en solo 3 agentes hiperespecializados (Enrutador, Analista y Sintetizador) reduciendo saltos, costos de tokens y latencia conversacional.</p>
+<p class="text-xs text-slate-600 mb-6 flex-grow">Elimina intermediarios complejos de red and conecta el chat de S3 directamente a n8n. Condensa la lógica cognitiva de negocio en solo 3 agentes hiperespecializados (Enrutador, Analista y Sintetizador) reduciendo saltos, costos de tokens y latencia conversacional.</p>
 <div class="grid grid-cols-2 gap-2 mt-auto">
 <div class="bg-emerald-50 p-3 rounded-lg border border-emerald-100 text-center">
 <div class="text-[9px] font-bold text-[#009639] uppercase">Tiempo</div>
@@ -96,10 +94,9 @@ Evaluación de arquitectura de agentes lógicos para Daiichi-Sankyo. Comparamos 
 </div>
 </div>
 
-<!-- OPCIÓN 3 OPTIMIZADA -->
 <div class="bg-white rounded-2xl p-6 card-elevation border-t-8 border-[#D69E2E] flex flex-col h-full">
 <div class="text-3xl mb-3">🚀</div>
-<h3 class="text-xl font-bold text-[#D69E2E] mb-2">Opción 3: Monolito(2 Agentes)</h3>
+<h3 class="text-xl font-bold text-[#D69E2E] mb-2">Opción 3: Monolito (2 Agentes)</h3>
 <p class="text-xs text-slate-600 mb-6 flex-grow">La ruta de despliegue rápido más segura para un único desarrollador (2 meses). Utiliza archivos planos locales (Excel/CSV) montados en un contenedor Docker en n8n para omitir el desarrollo de Athena/S3, programando 8 semanas para absorber holgadamente cualquier fallo o cambio.</p>
 <div class="grid grid-cols-2 gap-2 mt-auto">
 <div class="bg-amber-50 p-3 rounded-lg border border-amber-100 text-center">
@@ -107,15 +104,14 @@ Evaluación de arquitectura de agentes lógicos para Daiichi-Sankyo. Comparamos 
 <div class="text-lg font-black text-[#D69E2E]">8 Semanas</div>
 </div>
 <div class="bg-amber-50 p-3 rounded-lg border border-amber-100 text-center">
-<div class="text-[9px] font-bold text-[#D69E2E] uppercase">Carga (1 Dev)</div>
-<div class="text-sm font-bold text-emerald-600">Alta</div>
+<div class="text-[9px] font-bold text-[#D69E2E] uppercase">Holgura / Buffer</div>
+<div class="text-sm font-bold text-emerald-600">Alta (+2 Sem)</div>
 </div>
 </div>
 </div>
 </div>
 </section>
 
-<!-- SECCIÓN: Estrategia del Frontend y Simulador Interactivo -->
 <section id="mockup-frontend" class="scroll-mt-24 bg-white rounded-2xl p-8 card-elevation border border-slate-200">
 <div class="max-w-4xl mx-auto">
 <h2 class="text-3xl font-bold text-[#002855] mb-4 text-center">Estrategia del Frontend & Visualización</h2>
@@ -123,7 +119,6 @@ Evaluación de arquitectura de agentes lógicos para Daiichi-Sankyo. Comparamos 
 El Frontend asume responsabilidades clave de experiencia de usuario: sanitizar inputs, disparar la llamada Fetch segura, renderizar loaders animados para la espera de Athena y pintar dinámicamente gráficas interactivas mediante Chart.js.
 </p>
 
-<!-- Tarjetas de Arquitectura del Frontend -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 text-center">
 <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
 <span class="text-2xl">⚡</span>
@@ -142,7 +137,6 @@ El Frontend asume responsabilidades clave de experiencia de usuario: sanitizar i
 </div>
 </div>
 
-<!-- Simulador Interactivo de Interfaz del Frontend -->
 <div class="bg-slate-900 rounded-2xl p-4 md:p-6 shadow-2xl text-slate-100 max-w-2xl mx-auto">
 <div class="flex items-center justify-between border-b border-slate-700 pb-3 mb-4">
 <div class="flex items-center space-x-2">
@@ -171,7 +165,6 @@ El Frontend asume responsabilidades clave de experiencia de usuario: sanitizar i
 </div>
 </section>
 
-<!-- SECCIÓN: Flujos de Arquitectura Interactivos -->
 <section id="arquitectura" class="scroll-mt-24 bg-white rounded-2xl p-8 card-elevation border border-slate-200">
 <h2 class="text-3xl font-bold text-[#002855] mb-2 text-center">Flujos de Arquitectura</h2>
 <p class="text-slate-600 max-w-3xl mx-auto text-center mb-8">
@@ -192,7 +185,6 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
 </div>
 </div>
 
-<!-- CONTENEDOR DE DIAGRAMA DE OPCIÓN 1 -->
 <div id="archFlow1" class="space-y-8 hidden">
     <div class="flex flex-wrap items-center gap-y-4 justify-center bg-slate-50 p-6 rounded-2xl border border-slate-200">
         <div id="node1_usr" onclick="selectNode(1, 'usr')" class="flow-box bg-[#002855] text-white border-[#002855] hover:scale-105 active:scale-95 shadow-md">👤 Usuario</div>
@@ -213,7 +205,6 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
     </div>
 </div>
 
-<!-- CONTENEDOR DE DIAGRAMA DE OPCIÓN 2 -->
 <div id="archFlow2" class="space-y-8 hidden">
     <div class="flex flex-wrap items-center gap-y-4 justify-center bg-emerald-50/40 p-6 rounded-2xl border border-emerald-100 font-medium">
         <div id="node2_usr" onclick="selectNode(2, 'usr')" class="flow-box bg-[#009639] text-white border-[#009639] hover:scale-105 active:scale-95 shadow-md">👤 Usuario</div>
@@ -228,7 +219,6 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
     </div>
 </div>
 
-<!-- CONTENEDOR DE DIAGRAMA DE OPCIÓN 3 (OPTIMIZADA) -->
 <div id="archFlow3" class="space-y-8 font-medium">
     <div class="flex flex-wrap items-center gap-y-4 justify-center bg-amber-50/40 p-6 rounded-2xl border border-amber-200">
         <div id="node3_usr" onclick="selectNode(3, 'usr')" class="flow-box bg-[#D69E2E] text-white border-[#D69E2E] hover:scale-105 active:scale-95 shadow-md">👤 Usuario</div>
@@ -243,7 +233,6 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
     </div>
 </div>
 
-<!-- FICHA TÉCNICA DINÁMICA -->
 <div class="max-w-4xl mx-auto mt-6 bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-inner transition-all duration-300">
     <div class="flex items-center space-x-3 mb-4">
         <div class="p-2 bg-amber-600 text-white rounded-lg text-lg" id="detailIcon">👤</div>
@@ -271,7 +260,6 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
 </div>
 </section>
 
-<!-- Cronogramas de Sprints Detallados -->
 <section id="cronogramas" class="scroll-mt-24">
 <div class="mb-12 text-center">
 <h2 class="text-3xl font-bold text-[#002855] mb-2">Desglose Técnico de Sprints (1 Dev)</h2>
@@ -293,9 +281,7 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
 <div id="timelineContainer_Sprint" class="relative max-w-5xl mx-auto px-4">
 <div class="timeline-line"></div>
 
-<!-- Timeline Opción 1 (16 Semanas - 8 Sprints) -->
 <div id="timelineOpt1_Sprint" class="space-y-12 hidden">
-<!-- SPRINT 1 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
 <div class="flex items-center justify-center bg-[#004B87] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S1</div>
 <div class="w-full md:w-1/2 md:pr-12 md:text-right mt-4 md:mt-0">
@@ -307,7 +293,6 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
 </div>
 <div class="hidden md:block w-1/2"></div>
 </div>
-<!-- SPRINT 2 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
 <div class="flex items-center justify-center bg-[#004B87] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S2</div>
 <div class="hidden md:block w-1/2"></div>
@@ -319,7 +304,6 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
 </div>
 </div>
 </div>
-<!-- SPRINT 3 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
 <div class="flex items-center justify-center bg-[#004B87] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S3</div>
 <div class="w-full md:w-1/2 md:pr-12 md:text-right mt-4 md:mt-0">
@@ -331,7 +315,6 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
 </div>
 <div class="hidden md:block w-1/2"></div>
 </div>
-<!-- SPRINT 4 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
 <div class="flex items-center justify-center bg-[#004B87] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S4</div>
 <div class="hidden md:block w-1/2"></div>
@@ -343,7 +326,6 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
 </div>
 </div>
 </div>
-<!-- SPRINT 5 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
 <div class="flex items-center justify-center bg-[#004B87] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S5</div>
 <div class="w-full md:w-1/2 md:pr-12 md:text-right mt-4 md:mt-0">
@@ -355,7 +337,6 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
 </div>
 <div class="hidden md:block w-1/2"></div>
 </div>
-<!-- SPRINT 6 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
 <div class="flex items-center justify-center bg-[#004B87] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S6</div>
 <div class="hidden md:block w-1/2"></div>
@@ -367,7 +348,6 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
 </div>
 </div>
 </div>
-<!-- SPRINT 7 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
 <div class="flex items-center justify-center bg-[#004B87] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S7</div>
 <div class="w-full md:w-1/2 md:pr-12 md:text-right mt-4 md:mt-0">
@@ -379,7 +359,6 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
 </div>
 <div class="hidden md:block w-1/2"></div>
 </div>
-<!-- SPRINT 8 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
 <div class="flex items-center justify-center bg-[#004B87] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S8</div>
 <div class="hidden md:block w-1/2"></div>
@@ -393,9 +372,7 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
 </div>
 </div>
 
-<!-- Timeline Opción 2 (12 Semanas - 6 Sprints) -->
 <div id="timelineOpt2_Sprint" class="space-y-12 hidden">
-<!-- SPRINT 1 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
 <div class="flex items-center justify-center bg-[#009639] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S1</div>
 <div class="w-full md:w-1/2 md:pr-12 md:text-right mt-4 md:mt-0">
@@ -407,19 +384,16 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
 </div>
 <div class="hidden md:block w-1/2"></div>
 </div>
-<!-- SPRINT 2 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
 <div class="flex items-center justify-center bg-[#009639] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S2</div>
 <div class="hidden md:block w-1/2"></div>
 <div class="w-full md:w-1/2 md:pl-12 mt-4 md:mt-0">
-<div class="bg-white p-6 rounded-2xl card-elevation border-l-4 border-[#009639] inline-block w-full">
-<span class="bg-emerald-50 text-[#009639] text-xs px-2.5 py-0.5 rounded-full font-bold uppercase">Sprint 2 / Sem 3-4</span>
+<div class="bg-emerald-50 text-[#009639] text-xs px-2.5 py-0.5 rounded-full font-bold uppercase">Sprint 2 / Sem 3-4</span>
 <h4 class="text-lg font-bold text-[#002855] mt-2">Agente 1: El Enrutador Seguro y Memoria Postgres</h4>
 <p class="text-sm text-slate-600 mt-2">Implementación del primer agente en n8n enfocado en auditar la seguridad del prompt del usuario y enrutar la lógica conversacional de sesión.</p>
 </div>
 </div>
 </div>
-<!-- SPRINT 3 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
 <div class="flex items-center justify-center bg-[#009639] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S3</div>
 <div class="w-full md:w-1/2 md:pr-12 md:text-right mt-4 md:mt-0">
@@ -431,7 +405,6 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
 </div>
 <div class="hidden md:block w-1/2"></div>
 </div>
-<!-- SPRINT 4 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
 <div class="flex items-center justify-center bg-[#009639] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S4</div>
 <div class="hidden md:block w-1/2"></div>
@@ -443,7 +416,6 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
 </div>
 </div>
 </div>
-<!-- SPRINT 5 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
 <div class="flex items-center justify-center bg-[#009639] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S5</div>
 <div class="w-full md:w-1/2 md:pr-12 md:text-right mt-4 md:mt-0">
@@ -455,7 +427,6 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
 </div>
 <div class="hidden md:block w-1/2"></div>
 </div>
-<!-- SPRINT 6 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
 <div class="flex items-center justify-center bg-[#009639] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S6</div>
 <div class="hidden md:block w-1/2"></div>
@@ -468,9 +439,7 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
 </div>
 </div>
 
-<!-- Timeline Opción 3 (8 Semanas - 4 Sprints Quincenales) -->
 <div id="timelineOpt3_Sprint" class="space-y-12">
-<!-- SPRINT 1 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
 <div class="flex items-center justify-center bg-[#D69E2E] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S1</div>
 <div class="w-full md:w-1/2 md:pr-12 md:text-right mt-4 md:mt-0">
@@ -491,7 +460,6 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
 <div class="hidden md:block w-1/2"></div>
 </div>
 
-<!-- SPRINT 2 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
 <div class="flex items-center justify-center bg-[#D69E2E] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S2</div>
 <div class="hidden md:block w-1/2"></div>
@@ -512,7 +480,6 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
 </div>
 </div>
 
-<!-- SPRINT 3 -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
 <div class="flex items-center justify-center bg-[#D69E2E] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S3</div>
 <div class="w-full md:w-1/2 md:pr-12 md:text-right mt-4 md:mt-0">
@@ -534,7 +501,6 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
 <div class="hidden md:block w-1/2"></div>
 </div>
 
-<!-- SPRINT 4 (BUFFER DE CONTINGENCIA PLANIFICADO) -->
 <div class="relative flex flex-col md:flex-row items-start md:items-center">
 <div class="flex items-center justify-center bg-[#D69E2E] text-white w-10 h-10 rounded-full font-bold z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">S4</div>
 <div class="hidden md:block w-1/2"></div>
@@ -561,7 +527,6 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
 </div>
 </section>
 
-<!-- Análisis Cuantitativo de Desempeño (Métricas) -->
 <section id="metricas" class="scroll-mt-24">
 <div class="text-center mb-12">
 <h2 class="text-3xl font-bold text-[#002855] mb-2">Métricas Adaptadas (1 Dev)</h2>
@@ -593,7 +558,7 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
     <ul class="list-disc pl-4 space-y-2 bg-transparent border-0 shadow-none">
         <li><strong>Mantenibilidad y Simplicidad:</strong> La nueva Opción 3 unificada en Docker (Monolito Express de 2 Agentes) domina este aspecto con puntaje máximo (5/5). Para una sola persona, es infinitamente más sencillo mantener un único flujo de 2 agentes que lea un archivo local de Excel que lidiar con desajustes de red y queries sobre el Data Lake.</li>
         <li><strong>Precisión IA:</strong> La Opción 1 obtiene la puntuación más alta (5/5) debido a su alto aislamiento físico. No obstante, la Opción 3 (Puntaje: 4.2/5) mantiene un estándar de precisión excelente al aislar las validaciones de prompt en el Agente 1 (Seguridad) y la consulta de datos estática estructurada en el Agente 2.</li>
-        <li><strong>Seguridad Enterprise:</strong> La Opción 1 cuenta con el blindaje perimetral más robusto al aislar n8n en VPCs privadas (Puntaje: 5/5). Las Opciones 2 y 3 (Puntaje: 4/5 y 4.5/5 respectivamente) responden con un estándar de seguridad excelente mediante cifrado TLS 1.3, autenticación Bearer Token y aislamiento nativo por contenedores Docker, lo cual es óptimo y suficiente para una operación ágil sin la pesadilla de mantenimiento de la primera.</li>
+        <li><strong>Seguridad Enterprise:</strong> La Opción 1 cuenta con el blindaje perimetral más robusto al aislar n8n en VPCs privadas (Puntaje: 5/5). Las Opciones 2 y 3 (Puntaje: 4/5 y 4.5/5 respectively) responden con un estándar de seguridad excelente mediante cifrado TLS 1.3, autenticación Bearer Token y aislamiento nativo por contenedores Docker, lo cual es óptimo y suficiente para una operación ágil sin la pesadilla de mantenimiento de la primera.</li>
     </ul>
 </div>
 <div class="chart-container">
@@ -603,12 +568,121 @@ Explora la secuencia lógica de cada opción. <strong>Haz clic en cualquier caja
 </div>
 </section>
 
-<!-- Recomendación Estratégica -->
+<section id="plan-ingenieria" class="scroll-mt-24 bg-white rounded-2xl p-8 card-elevation border border-slate-200">
+<div class="max-w-4xl mx-auto space-y-12">
+    <div class="text-center border-b border-slate-200 pb-6">
+        <h2 class="text-3xl font-bold text-[#002855] mb-2">Plan de Ingeniería Detallado: Opción 3 (Monolito Express)</h2>
+        <p class="text-slate-600 text-sm">Especificación de requerimientos lógicos, costos financieros y metodologías de implementación.</p>
+    </div>
+
+    <div class="space-y-4">
+        <h3 class="text-xl font-bold text-[#002855] flex items-center">
+            <span class="bg-amber-100 text-amber-800 text-sm px-2 py-0.5 rounded-md mr-2">1</span> Paso a Paso (Cronograma por Sprints)
+        </h3>
+        <p class="text-sm text-slate-600">El proyecto se divide en 4 Sprints quincenales manejados en un solo lienzo de n8n:</p>
+        <div class="space-y-4 text-sm pl-2">
+            <div class="border-l-2 border-[#D69E2E] pl-4">
+                <strong class="text-[#002855]">Sprint 1 (Semanas 1-2) - Infraestructura y Canal de Entrada:</strong>
+                <ul class="list-disc pl-4 mt-1 text-xs text-slate-600 space-y-0.5">
+                    <li>Montar el servidor privado virtual y configurar Docker-Compose.</li>
+                    <li>Lanzar n8n junto a su base de datos local PostgreSQL para almacenar el histórico de chat.</li>
+                    <li>Desplegar la interfaz web estática en el almacenamiento web con distribución de CDN activa.</li>
+                    <li>Conectar el chat web directamente al Webhook de n8n mediante peticiones HTTPS encriptadas.</li>
+                </ul>
+            </div>
+            <div class="border-l-2 border-[#D69E2E] pl-4">
+                <strong class="text-[#002855]">Sprint 2 (Semanas 3-4) - El Agente Enrutador y Seguridad:</strong>
+                <ul class="list-disc pl-4 mt-1 text-xs text-slate-600 space-y-0.5">
+                    <li>Cargar el Agente 1 (Enrutador de Seguridad) en n8n.</li>
+                    <li>Programar las reglas de seguridad (Guardrails) en Amazon Bedrock para bloquear inyecciones de prompts maliciosos.</li>
+                    <li>Programar el guardado y lectura del session_id mediante almacenamiento local del navegador para mantener la memoria del chat.</li>
+                </ul>
+            </div>
+            <div class="border-l-2 border-[#D69E2E] pl-4">
+                <strong class="text-[#002855]">Sprint 3 (Semanas 5-6) - El Agente de Datos y Gráficos:</strong>
+                <ul class="list-disc pl-4 mt-1 text-xs text-slate-600 space-y-0.5">
+                    <li>Cargar el archivo consolidado de datos planos (Excel o CSV) en caliente dentro del volumen local de Docker de n8n.</li>
+                    <li>Construir el Agente 2 (Analista Conversacional) para parsear el archivo y extraer respuestas estructuradas.</li>
+                    <li>Integrar la librería Chart.js en el Frontend para renderizar canvas dinámicos en base al JSON entregado por n8n.</li>
+                </ul>
+            </div>
+            <div class="border-l-2 border-[#D69E2E] pl-4">
+                <strong class="text-[#002855]">Sprint 4 (Semanas 7-8) - Colchón de Contingencia y Despliegue:</strong>
+                <ul class="list-disc pl-4 mt-1 text-xs text-slate-600 space-y-0.5">
+                    <li>Buffer de seguridad: 2 semanas libres de desarrollo nuevo para absorber cualquier fallo, caída o cambio de último momento.</li>
+                    <li>Simular cargas de estrés, conectar telemetría de monitoring e implementar políticas de caché.</li>
+                    <li>Migración final de credenciales a los entornos productivos estables de Bedrock.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="space-y-4">
+        <h3 class="text-xl font-bold text-[#002855] flex items-center">
+            <span class="bg-amber-100 text-amber-800 text-sm px-2 py-0.5 rounded-md mr-2">2</span> Herramientas Utilizadas (Stack Tecnológico)
+        </h3>
+        <p class="text-sm text-slate-600">Al simplificar la arquitectura para que sea fácil de mantener por un solo desarrollador, las herramientas se reducen al mínimo necesario:</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-slate-700 bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <div><strong>Orquestación Visual:</strong> n8n (Como core del flujo de los 2 agentes).</div>
+            <div><strong>Contenedores y Aislamiento:</strong> Docker & Docker-Compose (Para encapsular n8n y Postgres localmente).</div>
+            <div><strong>Servidor de Hosting (Cerebro):</strong> AWS EC2 (Instancia Linux/Ubuntu virtual).</div>
+            <div><strong>Plataforma de Inteligencia:</strong> Amazon Bedrock (Modelos fundacionales encriptados corporativos).</div>
+            <div><strong>Almacenamiento de Datos:</strong> Archivo plano CSV o Excel local montado en Docker (sin Athena complejo).</div>
+            <div><strong>Interfaz de Usuario:</strong> Página web estática nativa (HTML5 / Tailwind CSS / Vanilla JS).</div>
+            <div><strong>Distribución Web:</strong> AWS S3 (Alojamiento estático) y Amazon CloudFront (CDN de entrega rápida).</div>
+            <div><strong>Monitoreo e Historial:</strong> Langfuse (Telemetría de IA) y PostgreSQL (Base de datos interna de n8n).</div>
+        </div>
+    </div>
+
+    <div class="space-y-4">
+        <h3 class="text-xl font-bold text-[#002855] flex items-center">
+            <span class="bg-amber-100 text-amber-800 text-sm px-2 py-0.5 rounded-md mr-2">3</span> ¿Cómo se va a hacer? (Lógica de Ingeniería)
+        </h3>
+        <p class="text-sm text-slate-600 text-justify">
+            El secreto de que esta solución sea ultra-rápida y a prueba de fallos radica en la eliminación de intermediarios físicos de red:
+        </p>
+        <ul class="list-disc pl-6 text-xs text-slate-600 space-y-2 text-justify">
+            <li><strong>Sin bases de datos complejas:</strong> Olvídate de configurar AWS Glue o catalogar particiones de Terabytes en Athena. El desarrollador sube un archivo plano (Excel/CSV) con la data estructurada del negocio al servidor. n8n lee este archivo local en milisegundos con nodos nativos de sistema de archivos.</li>
+            <li><strong>Lógica en un solo lienzo:</strong> El Agente 1 (Seguridad) procesa el mensaje. Si es seguro, el flujo pasa linealmente al Agente 2, el cual lee el archivo plano, extrae las filas correspondientes, y le pide a Bedrock que redacte la respuesta final y que ordene los números en un formato JSON limpio en una sola llamada de API.</li>
+            <li><strong>Pintado del lado del cliente:</strong> n8n responde al Frontend un único paquete con el texto y el JSON numérico. El script JavaScript del Frontend detecta los números y usa Chart.js para "dibujar" la gráfica directamente en la pantalla del usuario.</li>
+        </ul>
+    </div>
+
+    <div class="space-y-4">
+        <h3 class="text-xl font-bold text-[#002855] flex items-center">
+            <span class="bg-amber-100 text-amber-800 text-sm px-2 py-0.5 rounded-md mr-2">4</span> Costos de Implementación (Estimación Mensual)
+        </h3>
+        <p class="text-sm text-slate-600">Al ser una infraestructura simplificada y en su mayoría Serverless o auto-alojada, los costos fijos mensuales son sumamente bajos:</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
+                <h4 class="text-xs font-bold text-[#002855] uppercase tracking-wider">A. Costos Fijos de AWS (Infraestructura)</h4>
+                <ul class="list-disc pl-4 text-xs text-slate-600 space-y-1">
+                    <li><strong>AWS EC2</strong> (Instancia t3.medium o similar para n8n + Docker + Postgres): ~$25 - $35 USD / mes.</li>
+                    <li><strong>AWS S3 + CloudFront</strong> (Alojamiento y distribución): ~$2 - $5 USD / mes (centavos por GB transferido).</li>
+                </ul>
+            </div>
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
+                <h4 class="text-xs font-bold text-[#002855] uppercase tracking-wider">B. Costos Variables (Uso de IA)</h4>
+                <ul class="list-disc pl-4 text-xs text-slate-600 space-y-1">
+                    <li><strong>Amazon Bedrock</strong> (Modelos Claude 3.5 Sonnet o Haiku): ~$10 - $45 USD / mes (según tráfico).</li>
+                    <li><strong>Optimización incluida:</strong> Al usar 2 agentes lógicos y caché Redis en n8n, se evita re-procesar tokens en preguntas redundantes, recortando costos hasta en un 40%.</li>
+                    <li><strong>Langfuse:</strong> Capa Hobby / Self-hosted sin costo de licenciamiento.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-center font-bold text-sm text-[#002855]">
+            💰 Costo Total Estimado de Operación: Entre $40 y $95 USD mensuales. Es una solución sumamente económica y eficiente de escala corporativa.
+        </div>
+    </div>
+</div>
+</section>
+
 <section id="recomendacion" class="scroll-mt-24 mb-12">
 <div class="bg-gradient-to-r from-[#002855] to-[#004B87] rounded-3xl p-8 md:p-12 text-white shadow-2xl relative overflow-hidden">
 <div class="relative z-10">
 <h2 class="text-3xl font-extrabold mb-6 flex items-center text-white">
-<span class="text-4xl mr-4">🎯</span> Recomendación Ajustada
+<span class="text-4xl mr-4">🎯</span> Recomendación Asignada
 </h2>
 <p class="text-lg md:text-xl text-slate-100 mb-8 leading-relaxed max-w-4xl text-justify">
 Con un equipo de <strong>1 sola persona</strong> y la necesidad mandatoria de entregar una solución funcional de chat segura y auditable en **2 meses (8 semanas)**, la decisión técnica idónea es implementar la **Opción 3: Monolito Express de 2 Agentes en n8n bajo Docker**. Simplifica el canal de datos a un archivo Excel/CSV local, pero conserva la seguridad de Bedrock y el monitoreo asíncrono en Langfuse.
@@ -617,12 +691,12 @@ Con un equipo de <strong>1 sola persona</strong> y la necesidad mandatoria de en
 <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl">
 <div class="text-3xl mb-3">🧩</div>
 <h4 class="font-bold text-xl mb-2 text-[#FFD100]">Aislamiento en Docker</h4>
-<p class="text-xs text-slate-200 font-medium">La solución completa se empaqueta en contenedores locales, facilitando el despliegue rápido de un solo paso en la VPC.</p>
+<p class="text-sm text-slate-200 font-medium">La solución completa se empaqueta en contenedores locales, facilitando el despliegue rápido de un solo paso en la VPC.</p>
 </div>
 <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl">
 <div class="text-3xl mb-3">⏳</div>
 <h4 class="font-bold text-xl mb-2 text-[#FFD100]">Entrega en 2 Meses</h4>
-<p class="text-xs text-slate-200 font-medium">Al evitar la conexión compleja de Athena sobre S3, el desarrollador tiene tiempo de sobra para QA y mitigación en Sprints cortos.</p>
+<p class="text-sm text-slate-200 font-medium">Al evitar la conexión compleja de Athena sobre S3, el desarrollador tiene tiempo de sobra para QA y mitigación en Sprints cortos.</p>
 </div>
 <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl">
 <div class="text-3xl mb-3">📊</div>
